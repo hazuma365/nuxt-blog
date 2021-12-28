@@ -1,34 +1,22 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+    <header>
+      <v-app-bar
+        color="black"
+        elevate-on-scroll
+        app
+      >
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-toolbar-title>hazuma365.com</v-toolbar-title>
+      </v-app-bar>
+    </header>
+    <!--Main -->
     <v-main>
       <v-container>
         <Nuxt />
       </v-container>
     </v-main>
+    <!--Footer -->
     <v-footer
       :absolute="!fixed"
       app
@@ -43,30 +31,8 @@ export default {
   name: 'DefaultLayout',
   data () {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'hazuma365',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'About',
-          to: '/about'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: true,
-      title: 'hazuma365'
+      title: 'hazuma365',
+      fixed: false
     }
   }
 }
