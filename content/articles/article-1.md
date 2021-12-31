@@ -1,5 +1,5 @@
 ---
-title: article1
+title: article1-title
 created_at: 2020-12-12
 description: article1のdescription
 ---

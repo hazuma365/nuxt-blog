@@ -1,13 +1,16 @@
 <template>
 <div>
-  <div v-for="article in articles" :key="article.slug">
-    {{ moment(article.created_at).format("YYYY/MM/DD")}}
-    <nuxt-link :to="'/articles/' + article.slug">
-      <h3>{{ article.title }}</h3>
-    </nuxt-link>
-    <p>{{ article.description }}</p>
-    <hr style="border:0;border-top:1px solid">
-  </div>
+  <v-card v-for="article in articles" :key="article.slug" class="my-5">
+    <v-card-title>{{ article.title }}</v-card-title>
+    <v-card-subtitle>{{ moment(article.created_at).format("YYYY/MM/DD")}}</v-card-subtitle>
+    <v-card-text>{{ article.description }}</v-card-text>
+    <v-card-actions>
+      <nuxt-link :to="'/articles/' + article.slug">
+        <p>Read more →</p>
+      </nuxt-link>
+      <v-spacer></v-spacer>
+    </v-card-actions>
+  </v-card>
 </div>
 </template>
 
