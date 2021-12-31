@@ -2,12 +2,13 @@
   <v-app>
     <header>
       <v-app-bar
+        absolute
         color="black"
         elevate-on-scroll
         app
       >
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
-        <v-toolbar-title>hazuma365.com</v-toolbar-title>
+        <v-toolbar-title>hazuma365</v-toolbar-title>
       </v-app-bar>
     </header>
     <!--Main -->
