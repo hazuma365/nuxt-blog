@@ -8,7 +8,7 @@
         app
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-toolbar-title>hazuma365</v-toolbar-title>
+        <v-toolbar-title>hazuma365blog</v-toolbar-title>
       </v-app-bar>
       <v-navigation-drawer
                 v-model="drawer"
@@ -63,7 +63,7 @@ export default {
   name: 'DefaultLayout',
   data () {
     return {
-      title: 'hazuma365',
+      title: 'hazuma365blog',
       fixed: true,
       drawer: false,
       items: [

@@ -1,5 +1,6 @@
 <template>
 <div>
+  <h2>POSTS</h2>
   <v-card v-for="article in articles" :key="article.slug" class="my-5">
     <v-card-subtitle>{{ moment(article.created_at).format("YYYY/MM/DD")}}</v-card-subtitle>
     <v-card-actions>
