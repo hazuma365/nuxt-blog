@@ -1,12 +1,10 @@
 <template>
 <div>
   <v-card v-for="article in articles" :key="article.slug" class="my-5">
-    <v-card-title>{{ article.title }}</v-card-title>
     <v-card-subtitle>{{ moment(article.created_at).format("YYYY/MM/DD")}}</v-card-subtitle>
-    <v-card-text>{{ article.description }}</v-card-text>
     <v-card-actions>
       <nuxt-link :to="'/articles/' + article.slug">
-        <p>Read more →</p>
+        <p>{{ article.title }}</p>
       </nuxt-link>
       <v-spacer></v-spacer>
     </v-card-actions>

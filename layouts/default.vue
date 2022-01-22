@@ -72,11 +72,6 @@ export default {
           title: 'HOME',
           to: '/'
         },
-        {
-          icon: 'mdi-file-document',
-          title: 'ARTICLES',
-          to: '/'
-        },
       ],
     }
   }
